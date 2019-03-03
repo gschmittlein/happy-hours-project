@@ -40,6 +40,10 @@ var beerIcon = L.icon({
     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
 
+//move popup text to html, reference here
+//make it so they all show automatically when you open the page
+//call more bars, add more data
+//add new filter categories
 
 var WhiskeyThief = L.marker([42.0463, -87.6806]).bindPopup('<b><i>Whiskey Thief</i></b><br><b>Saturday and Sunday (11am-12pm):</b> Free mimosas<br><b>Monday (all hours):</b> Industry night - drink deals and 20% off for people working in the restaurant or hair salon industry<br><b>Tuesday (all hours):</b> Drink deals and karaoke at 10pm'),
 
