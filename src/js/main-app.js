@@ -30,7 +30,7 @@ var SmylieBrothersIcon = L.icon({
 });
 
 var beerIcon = L.icon({
-    iconUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRPGkttTH_BTbV3v7OVU5yxtn2IODePLM_bRLdXuuDBnyF72Qn1w',
+    iconUrl: 'https://morganmcfalljohnsen.files.wordpress.com/2019/05/images.png',
     iconSize:     [30, 55], // size of the icon
     shadowSize:   [50, 64], // size of the shadow
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
