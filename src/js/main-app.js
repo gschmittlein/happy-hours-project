@@ -49,7 +49,11 @@ var WhiskeyThief = L.marker([42.0463, -87.6806], {icon: beerIcon}).bindPopup('<h
 
     TheCelticKnot = L.marker([42.0480, -87.6801], {icon: beerIcon}).bindPopup('<h4>The Celtic Knot</h4><b>Monday (all hours):</b> $4 16oz pints of Smithwicks Ale<br><b>Tuesday (all hours):</b> $4 16oz Pints of Hickster Cream Ale<br><b>Wednesday (all hours):</b> $4 16oz pints of Blue Moon<br><b>Thursday (all hours):</b> $4 16oz pints of Snakebite<br><b>Sunday (all hours):</b> $4 16oz pints of Magners Hard Cider<br><b>All Week (all hours):</b> $3 Beer Special, $6 Special Cocktail'),
 
-    Bat17 = L.marker([42.0488, -87.6832], {icon: beerIcon}).bindPopup('<h4>Bat 17</h4><b>All Nights:</b> $3 12oz cans of Pabst Blue Ribbon and $4 16oz cans of Miller Lite<br><b>Monday (tk hours):</b> $3 Select Pints and $20 Select Towers<br><b>Tuesday (tk hours):</b> $5 Appetizer Special<br><b>Wednesday (tk hours):</b> $4.50 Draft Night<br><b>Thursday (tk hours):</b> $3 Vodka Special<br><b>Saturday (tk hours):</b> $5 Shipwrecked Rum Special<br><b>Sunday (tk hours):</b> $4.50 Bloody Mary'),
+    Bat17 = L.marker([42.0488, -87.6832], {icon: beerIcon}).bindPopup('<h4>Bat 17</h4><b>Every Night:</b> $3 12oz cans of Pabst Blue Ribbon and $4 16oz cans of Miller Lite<br><b>Monday (tk hours):</b> $3 Select Pints and $20 Select Towers<br><b>Tuesday (tk hours):</b> $5 Appetizer Special<br><b>Wednesday (tk hours):</b> $4.50 Draft Night<br><b>Thursday (tk hours):</b> $3 Vodka Special<br><b>Saturday (tk hours):</b> $5 Shipwrecked Rum Special<br><b>Sunday (tk hours):</b> $4.50 Bloody Mary'),
+
+    Koi = L.marker([42.0465, -87.6810], {icon: beerIcon}).bindPopup('<h4>Koi</h4><b>Every Night(4:30 - 6:30pm):<b> half off cocktails'),
+
+    FoundKitchen = L.marker([42.0472, -87.6790], {icon: beerIcon}).bindPopup('<h4>Found Kitchen</h4><b>Tuesday-Friday (4-6pm):</b> tk deals'),
 
     PrairieMoon = L.marker([42.0474, -87.6788], {icon: beerIcon}).bindPopup('<h4>Prairie Moon</h4><b>Week Nights (4pm-6pm):</b> $6 select wines, $5 cocktails, $4 pints');
 
@@ -61,14 +65,14 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(mymap);
 
 
-var all = L.layerGroup([WhiskeyThief, BarLouie, WorldOfBeer, SmylieBrothers, TheCelticKnot, Bat17, PrairieMoon]);
-var monday = L.layerGroup([WhiskeyThief, WorldOfBeer, TheCelticKnot, Bat17, PrairieMoon]);
-var tuesday = L.layerGroup([WhiskeyThief, WorldOfBeer, SmylieBrothers, TheCelticKnot, Bat17, PrairieMoon]);
-var wednesday = L.layerGroup([BarLouie, WorldOfBeer, SmylieBrothers, TheCelticKnot, Bat17, PrairieMoon]);
-var thursday = L.layerGroup([WorldOfBeer, SmylieBrothers, TheCelticKnot, Bat17, PrairieMoon]);
-var friday = L.layerGroup([WorldOfBeer, TheCelticKnot, Bat17, PrairieMoon]);
-var saturday = L.layerGroup([WhiskeyThief, TheCelticKnot, Bat17]);
-var sunday = L.layerGroup([WhiskeyThief, SmylieBrothers, TheCelticKnot, Bat17]);
+var all = L.layerGroup([WhiskeyThief, BarLouie, WorldOfBeer, SmylieBrothers, TheCelticKnot, Bat17, Koi, FoundKitchen, PrairieMoon]);
+var monday = L.layerGroup([WhiskeyThief, WorldOfBeer, TheCelticKnot, Bat17, Koi, PrairieMoon]);
+var tuesday = L.layerGroup([WhiskeyThief, WorldOfBeer, SmylieBrothers, TheCelticKnot, Bat17, Koi, FoundKitchen, PrairieMoon]);
+var wednesday = L.layerGroup([BarLouie, WorldOfBeer, SmylieBrothers, TheCelticKnot, Bat17, Koi, FoundKitchen, PrairieMoon]);
+var thursday = L.layerGroup([WorldOfBeer, SmylieBrothers, TheCelticKnot, Bat17, Koi, FoundKitchen, PrairieMoon]);
+var friday = L.layerGroup([WorldOfBeer, TheCelticKnot, Bat17, Koi, FoundKitchen, PrairieMoon]);
+var saturday = L.layerGroup([WhiskeyThief, TheCelticKnot, Bat17, Koi]);
+var sunday = L.layerGroup([WhiskeyThief, SmylieBrothers, TheCelticKnot, Bat17, Koi]);
 
 
 var baseMaps = {};
