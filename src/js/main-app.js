@@ -55,7 +55,9 @@ var WhiskeyThief = L.marker([42.0463, -87.6806], {icon: beerIcon}).bindPopup('<h
 
     FoundKitchen = L.marker([42.0472, -87.6790], {icon: beerIcon}).bindPopup('<h4>Found Kitchen</h4><b>Tuesday-Friday (4-6pm):</b> tk deals'),
 
-    PrairieMoon = L.marker([42.0474, -87.6788], {icon: beerIcon}).bindPopup('<h4>Prairie Moon</h4><b>Week Nights (4pm-6pm):</b> $6 select wines, $5 cocktails, $4 pints');
+    PrairieMoon = L.marker([42.0474, -87.6788], {icon: beerIcon}).bindPopup('<h4>Prairie Moon</h4><b>Week Nights (4pm-6pm):</b> $6 select wines, $5 cocktails, $4 pints'),
+
+    BangersLace = L.marker([42.0456, -87.6824], {icon: beerIcon}).bindPopup('<h4>Bangers & Lace</h4><b>All Week (4pm-6pm):</b> $5 pints, all apps half off (except alligator), $7 house wine, $8 select cocktails');
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -65,14 +67,14 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(mymap);
 
 
-var all = L.layerGroup([WhiskeyThief, BarLouie, WorldOfBeer, SmylieBrothers, TheCelticKnot, Bat17, Koi, FoundKitchen, PrairieMoon]);
-var monday = L.layerGroup([WhiskeyThief, WorldOfBeer, TheCelticKnot, Bat17, Koi, PrairieMoon]);
-var tuesday = L.layerGroup([WhiskeyThief, WorldOfBeer, SmylieBrothers, TheCelticKnot, Bat17, Koi, FoundKitchen, PrairieMoon]);
-var wednesday = L.layerGroup([BarLouie, WorldOfBeer, SmylieBrothers, TheCelticKnot, Bat17, Koi, FoundKitchen, PrairieMoon]);
-var thursday = L.layerGroup([WorldOfBeer, SmylieBrothers, TheCelticKnot, Bat17, Koi, FoundKitchen, PrairieMoon]);
-var friday = L.layerGroup([WorldOfBeer, TheCelticKnot, Bat17, Koi, FoundKitchen, PrairieMoon]);
-var saturday = L.layerGroup([WhiskeyThief, TheCelticKnot, Bat17, Koi]);
-var sunday = L.layerGroup([WhiskeyThief, SmylieBrothers, TheCelticKnot, Bat17, Koi]);
+var all = L.layerGroup([WhiskeyThief, BarLouie, WorldOfBeer, SmylieBrothers, TheCelticKnot, Bat17, Koi, FoundKitchen, PrairieMoon, BangersLace]);
+var monday = L.layerGroup([WhiskeyThief, WorldOfBeer, TheCelticKnot, Bat17, Koi, PrairieMoon, BangersLace]);
+var tuesday = L.layerGroup([WhiskeyThief, WorldOfBeer, SmylieBrothers, TheCelticKnot, Bat17, Koi, FoundKitchen, PrairieMoon, BangersLace]);
+var wednesday = L.layerGroup([BarLouie, WorldOfBeer, SmylieBrothers, TheCelticKnot, Bat17, Koi, FoundKitchen, PrairieMoon, BangersLace]);
+var thursday = L.layerGroup([WorldOfBeer, SmylieBrothers, TheCelticKnot, Bat17, Koi, FoundKitchen, PrairieMoon, BangersLace]);
+var friday = L.layerGroup([WorldOfBeer, TheCelticKnot, Bat17, Koi, FoundKitchen, PrairieMoon, BangersLace]);
+var saturday = L.layerGroup([WhiskeyThief, TheCelticKnot, Bat17, Koi, BangersLace]);
+var sunday = L.layerGroup([WhiskeyThief, SmylieBrothers, TheCelticKnot, Bat17, Koi, BangersLace]);
 
 
 var baseMaps = {};

@@ -6,9 +6,9 @@
   "timestamp": "2018-04-10T08:13-0400",
   "dateline": "04/10/18 08:13 PM EDT",
   "header": {
-    "headline": "This is your headline in the metadata file",
-    "subhed": "Subhed lives in the metadata.",
-    "byline": "Firstname Lastname",
+    "headline": "Evanston Happy Hours",
+    "subhed": "Your comprehensive guide to all of Evanston's best happy hour deals.",
+    "byline": "Morgan McFall-Johnsen and Gabriel Schmittlein",
     "byline_link": "https://www.northbynorthwestern.com/"
   },
   "share": {
