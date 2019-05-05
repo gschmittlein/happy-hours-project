@@ -76,27 +76,50 @@ var friday = L.layerGroup([WorldOfBeer, TheCelticKnot, Bat17, Koi, FoundKitchen,
 var saturday = L.layerGroup([WhiskeyThief, TheCelticKnot, Bat17, Koi, BangersLace]);
 var sunday = L.layerGroup([WhiskeyThief, SmylieBrothers, TheCelticKnot, Bat17, Koi, BangersLace]);
 
-
-var baseMaps = {};
-
-
 all.addTo(mymap);
 
+let dayClicked = all
+let dayClickedPrev;
 
-var overlayMaps = {
-  "All": all,
-  "Monday": monday,
-  "Tuesday": tuesday,
-  "Wednesday": wednesday,
-  "Thursday": thursday,
-  "Friday": friday,
-  "Saturday": saturday,
-  "Sunday": sunday
-};
+let monClicked = false;
+$("#mon-button").click(() => {
+  dayClickedPrev = dayClicked
+  dayClicked = monday
+  mymap.removeLayer(dayClickedPrev)
+  dayClicked.addTo(mymap)//add day clicked
+  monClicked === false ? monClicked=true : monClicked=true;
+  console.log(`mon clicked? ${monClicked}`)
+  monClicked === true ? monday.addTo(mymap) : mymap.removeLayer(monday)
+})
+
+let tuesClicked = false;
+$("#tues-button").click(() => {
+  dayClickedPrev = dayClicked
+  dayClicked = tuesday
+  mymap.removeLayer(dayClickedPrev)
+  dayClicked.addTo(mymap)
+  tuesClicked === false ? tuesClicked=true : tuesClicked=true;
+  console.log(`tues clicked? ${tuesClicked}`)
+  tuesClicked === true ? tuesday.addTo(mymap) : mymap.removeLayer(tuesday)
+})
+
+let wedClicked = false;
+$("#wed-button").click(() => {
+  dayClickedPrev = dayClicked
+  dayClicked = wednesday
+  mymap.removeLayer(dayClickedPrev)
+  dayClicked.addTo(mymap)
+  wedClicked === false ? wedClicked=true : wedClicked=true;
+  console.log(`wed clicked? ${wedClicked}`)
+  wedClicked === true ? wednesday.addTo(mymap) : mymap.removeLayer(wednesday)
+})
 
 
-L.control.layers(null, overlayMaps).addTo(mymap);
 
+
+
+///if you remove Monday, then re-add anything that's "true"
+///OR, when you click -- remove everything else that's true and then add the layer --> dayClicked (by default assigned to all) then when you click on a day, whatever the last one was becomes dayClickedLast (<and you want dayClickedLast removed from the map)
 
 
 
