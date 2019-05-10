@@ -51,9 +51,9 @@ var WhiskeyThief = L.marker([42.0463, -87.6806], {icon: beerIcon}).bindPopup('<h
 
     Bat17 = L.marker([42.0488, -87.6832], {icon: beerIcon}).bindPopup('<h4>Bat 17</h4><b>Every Night:</b> $3 12oz cans of Pabst Blue Ribbon and $4 16oz cans of Miller Lite<br><b>Monday (tk hours):</b> $3 Select Pints and $20 Select Towers<br><b>Tuesday (tk hours):</b> $5 Appetizer Special<br><b>Wednesday (tk hours):</b> $4.50 Draft Night<br><b>Thursday (tk hours):</b> $3 Vodka Special<br><b>Saturday (tk hours):</b> $5 Shipwrecked Rum Special<br><b>Sunday (tk hours):</b> $4.50 Bloody Mary'),
 
-    Koi = L.marker([42.0465, -87.6810], {icon: beerIcon}).bindPopup('<h4>Koi</h4><b>Every Night(4:30 - 6:30pm):<b> half off cocktails'),
+    Koi = L.marker([42.0465, -87.6810], {icon: beerIcon}).bindPopup('<h4>Koi</h4><b>Every Night (4:30 - 6:30pm):</b> half off cocktails'),
 
-    FoundKitchen = L.marker([42.0472, -87.6790], {icon: beerIcon}).bindPopup('<h4>Found Kitchen</h4><b>Tuesday-Friday (4-6pm):</b> tk deals'),
+    FoundKitchen = L.marker([42.0472, -87.6790], {icon: beerIcon}).bindPopup('<h4>Found Kitchen</h4><b>Tuesday-Friday (4-6pm):</b> $5 cocktail of the day, select wines, select beers on tap'),
 
     PrairieMoon = L.marker([42.0474, -87.6788], {icon: beerIcon}).bindPopup('<h4>Prairie Moon</h4><b>Week Nights (4pm-6pm):</b> $6 select wines, $5 cocktails, $4 pints'),
 
@@ -99,9 +99,16 @@ $("#tues-button").click(() => {
   mymap.removeLayer(dayClickedPrev)
   dayClicked.addTo(mymap)
   tuesClicked === false ? tuesClicked=true : tuesClicked=true;
-  console.log(`tues clicked? ${tuesClicked}`)
-  tuesClicked === true ? tuesday.addTo(mymap) : mymap.removeLayer(tuesday)
-})
+  //console.log(`tues clicked? ${tuesClicked}`)
+  tuesClicked === true ? tuesday.addTo(mymap) : mymap.removeLayer(tuesday);
+  tuesClicked === true ? $("#tues-button").css('background-color', 'red') : $("#tues-button").css('background-color', 'white');
+  //console.log(`tues clicked? ${"#tues-button".css.backgroundColor}`)
+});
+
+$("#tues-button").click(function() {
+  $("#tues-button").css('background-color', 'red')
+});
+
 
 let wedClicked = false;
 $("#wed-button").click(() => {
@@ -114,12 +121,54 @@ $("#wed-button").click(() => {
   wedClicked === true ? wednesday.addTo(mymap) : mymap.removeLayer(wednesday)
 })
 
+let thursClicked = false;
+$("#thurs-button").click(() => {
+  dayClickedPrev = dayClicked
+  dayClicked = thursday
+  mymap.removeLayer(dayClickedPrev)
+  dayClicked.addTo(mymap)
+  thursClicked === false ? thursClicked=true : thursClicked=true;
+  console.log(`thurs clicked? ${thursClicked}`)
+  thursClicked === true ? thursday.addTo(mymap) : mymap.removeLayer(thursday)
+})
+
+let friClicked = false;
+$("#fri-button").click(() => {
+  dayClickedPrev = dayClicked
+  dayClicked = friday
+  mymap.removeLayer(dayClickedPrev)
+  dayClicked.addTo(mymap)
+  friClicked === false ? friClicked=true : friClicked=true;
+  console.log(`fri clicked? ${friClicked}`)
+  friClicked === true ? friday.addTo(mymap) : mymap.removeLayer(friday)
+})
 
 
+let satClicked = false;
+$("#sat-button").click(() => {
+  dayClickedPrev = dayClicked
+  dayClicked = saturday
+  mymap.removeLayer(dayClickedPrev)
+  dayClicked.addTo(mymap)
+  satClicked === false ? satClicked=true : satClicked=true;
+  console.log(`sat clicked? ${satClicked}`)
+  satClicked === true ? saturday.addTo(mymap) : mymap.removeLayer(saturday)
+})
+
+let sundClicked = false;
+$("#sun-button").click(() => {
+  dayClickedPrev = dayClicked
+  dayClicked = sunday
+  mymap.removeLayer(dayClickedPrev)
+  dayClicked.addTo(mymap)
+  sundClicked === false ? sundClicked=true : sundClicked=true;
+  console.log(`sund clicked? ${sundClicked}`)
+  sundClicked === true ? sunday.addTo(mymap) : mymap.removeLayer(sunday)
+})
 
 
-///if you remove Monday, then re-add anything that's "true"
-///OR, when you click -- remove everything else that's true and then add the layer --> dayClicked (by default assigned to all) then when you click on a day, whatever the last one was becomes dayClickedLast (<and you want dayClickedLast removed from the map)
+//make the buttons show a certain color when they're clicked
+//add Found
 
 
 
