@@ -81,8 +81,33 @@ all.addTo(mymap);
 let dayClicked = all
 let dayClickedPrev;
 
+let dayClickedBtn;
+let dayClickedPrevBtn;
+
+const changeClickedColor = function(e) {
+  dayClickedPrevBtn = dayClickedBtn;
+  console.dir(dayClickedPrevBtn)
+  dayClickedBtn = e.target;
+  console.dir(dayClickedBtn)
+  dayClickedBtn.style.backgroundColor = 'red';
+  dayClickedPrevBtn.style.backgroundColor = 'white';
+}
+
+let allClicked = false;
+$("#all-button").click((e) => {
+  changeClickedColor(e);
+  dayClicked ? dayClickedPrev = dayClicked : dayClickedPrev = $("#all-button").children()[0]
+  dayClicked = all
+  mymap.removeLayer(dayClickedPrev)
+  dayClicked.addTo(mymap)//add day clicked
+  monClicked === false ? allClicked=true : allClicked=true;
+  console.log(`All clicked? ${allClicked}`)
+  allClicked === true ? all.addTo(mymap) : mymap.removeLayer(all)
+})
+
 let monClicked = false;
-$("#mon-button").click(() => {
+$("#mon-button").click((e) => {
+  changeClickedColor(e);
   dayClickedPrev = dayClicked
   dayClicked = monday
   mymap.removeLayer(dayClickedPrev)
@@ -93,7 +118,8 @@ $("#mon-button").click(() => {
 })
 
 let tuesClicked = false;
-$("#tues-button").click(() => {
+$("#tues-button").click((e) => {
+  changeClickedColor(e);
   dayClickedPrev = dayClicked
   dayClicked = tuesday
   mymap.removeLayer(dayClickedPrev)
@@ -111,7 +137,8 @@ $("#tues-button").click(function() {
 
 
 let wedClicked = false;
-$("#wed-button").click(() => {
+$("#wed-button").click((e) => {
+  changeClickedColor(e);
   dayClickedPrev = dayClicked
   dayClicked = wednesday
   mymap.removeLayer(dayClickedPrev)
@@ -122,7 +149,8 @@ $("#wed-button").click(() => {
 })
 
 let thursClicked = false;
-$("#thurs-button").click(() => {
+$("#thurs-button").click((e) => {
+  changeClickedColor(e);
   dayClickedPrev = dayClicked
   dayClicked = thursday
   mymap.removeLayer(dayClickedPrev)
@@ -133,7 +161,8 @@ $("#thurs-button").click(() => {
 })
 
 let friClicked = false;
-$("#fri-button").click(() => {
+$("#fri-button").click((e) => {
+  changeClickedColor(e);
   dayClickedPrev = dayClicked
   dayClicked = friday
   mymap.removeLayer(dayClickedPrev)
@@ -145,7 +174,8 @@ $("#fri-button").click(() => {
 
 
 let satClicked = false;
-$("#sat-button").click(() => {
+$("#sat-button").click((e) => {
+  changeClickedColor(e);
   dayClickedPrev = dayClicked
   dayClicked = saturday
   mymap.removeLayer(dayClickedPrev)
@@ -156,7 +186,8 @@ $("#sat-button").click(() => {
 })
 
 let sundClicked = false;
-$("#sun-button").click(() => {
+$("#sun-button").click((e) => {
+  changeClickedColor(e);
   dayClickedPrev = dayClicked
   dayClicked = sunday
   mymap.removeLayer(dayClickedPrev)
@@ -169,8 +200,3 @@ $("#sun-button").click(() => {
 
 //make the buttons show a certain color when they're clicked
 //add Found
-
-
-
-
-
