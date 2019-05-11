@@ -89,7 +89,7 @@ const changeClickedColor = function(e) {
   console.dir(dayClickedPrevBtn)
   dayClickedBtn = e.target;
   console.dir(dayClickedBtn)
-  dayClickedBtn.style.backgroundColor = 'red';
+  dayClickedBtn.style.backgroundColor = '#CE92CC';
   dayClickedPrevBtn.style.backgroundColor = 'white';
 }
 
@@ -127,13 +127,9 @@ $("#tues-button").click((e) => {
   tuesClicked === false ? tuesClicked=true : tuesClicked=true;
   //console.log(`tues clicked? ${tuesClicked}`)
   tuesClicked === true ? tuesday.addTo(mymap) : mymap.removeLayer(tuesday);
-  tuesClicked === true ? $("#tues-button").css('background-color', 'red') : $("#tues-button").css('background-color', 'white');
-  //console.log(`tues clicked? ${"#tues-button".css.backgroundColor}`)
 });
 
-$("#tues-button").click(function() {
-  $("#tues-button").css('background-color', 'red')
-});
+
 
 
 let wedClicked = false;
