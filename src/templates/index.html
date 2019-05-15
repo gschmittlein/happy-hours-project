@@ -56,13 +56,20 @@
       {% include "partials/_header.html" %}
 
       <article class="container">
-        <p>College students and happy hour deals... Name a better duo – you can't! College students are understandably attracted to the discounted food and drink deals, but bar websites aren't always forthcoming with happy hour information. Finding times, specific deals, and days of the week can be really tough, especially for a busy college student, so we did all that work for you. Here is NBN's comprehensive guide to Evanston's top happy hour deals. Cheers!</p>
+        
+        <p>College students and happy hour deals... name a better duo – you can't! We're understandably attracted to discounted food and drink, but finding the times, deals, and days of the week can be tough, especially for a busy college student. We did the work for you. Here is NBN's comprehensive guide to Evanston's happy hour deals. Cheers!
+        </p>
 
-      <br>
+        <br>
       
       <div class="interactive-container">  
 
       <div class="buttons-container">
+
+
+        <label id="all-button">
+          <button class="button">All</button>
+        </label>
 
         <label id="mon-button">
           <button class="button">Monday</button>
@@ -92,16 +99,18 @@
           <button class="button">Sunday</button>
         </label>
 
+     
+
       </div>
-   
+
         <p class="content-fit mb0 small"></p>
-        
+
         <div class="map-container">
         <div id="mapid"></div>
       </div>
 
       </div>
-        
+
         <!-- Comments -->
       </article>
       {% include "partials/_footer.html" %}
