@@ -43,13 +43,13 @@ var WhiskeyThief = L.marker([42.0463, -87.6806], {icon: beerIcon}).bindPopup('<h
 
     BarLouie = L.marker([42.0454, -87.6821], {icon: beerIcon}).bindPopup('<h4>Bar Louie</h4><b>Wednesday (all hours):</b> Beer Night - $1.25 select domestic bottles, $5.25 signature martinis'),
 
-    WorldOfBeer = L.marker([42.0472, -87.6816], {icon: beerIcon}).bindPopup('<h4>World of Beer</h4><b>Week Nights (4pm-7pm):</b> $4 draughts, $5 spirits, $5 shareables, $6 wines'),
+    WorldOfBeer = L.marker([42.0472, -87.6816], {icon: beerIcon}).bindPopup('<h4>Evanston Pub (formerly World of Beer)</h4><b>Week Nights (4pm-7pm):</b> $4 draughts, $5 spirits, $5 shareables, $6 wines'),
 
-    SmylieBrothers = L.marker([42.0477, -87.6864], {icon: beerIcon}).bindPopup('<h4>Smylie Brothers</h4><b>Tuesday, Wednesday, Thursday, Sunday (4pm-6pm):</b> $3 select Smylie Brothers beer, $3 ribwich slider or $10 for 3 sliders with fries, $5 individual white bean dip'),
+    SmylieBrothers = L.marker([42.0477, -87.6864], {icon: beerIcon}).bindPopup('<h4>Smylie Brothers</h4><b>Tuesday, Wednesday, Thursday, Sunday (4-6pm):</b> $3 select Smylie Brothers beer, $3 ribwich slider or $10 for 3 sliders with fries, $5 individual white bean dip'),
 
     TheCelticKnot = L.marker([42.0480, -87.6801], {icon: beerIcon}).bindPopup('<h4>The Celtic Knot</h4><b>Monday (all hours):</b> $4 16oz pints of Smithwicks Ale<br><b>Tuesday (all hours):</b> $4 16oz Pints of Hickster Cream Ale<br><b>Wednesday (all hours):</b> $4 16oz pints of Blue Moon<br><b>Thursday (all hours):</b> $4 16oz pints of Snakebite<br><b>Sunday (all hours):</b> $4 16oz pints of Magners Hard Cider<br><b>All Week (all hours):</b> $3 Beer Special, $6 Special Cocktail'),
 
-    Bat17 = L.marker([42.0488, -87.6832], {icon: beerIcon}).bindPopup('<h4>Bat 17</h4><b>Every Night:</b> $3 12oz cans of Pabst Blue Ribbon and $4 16oz cans of Miller Lite<br><b>Monday (tk hours):</b> $3 Select Pints and $20 Select Towers<br><b>Tuesday (tk hours):</b> $5 Appetizer Special<br><b>Wednesday (tk hours):</b> $4.50 Draft Night<br><b>Thursday (tk hours):</b> $3 Vodka Special<br><b>Saturday (tk hours):</b> $5 Shipwrecked Rum Special<br><b>Sunday (tk hours):</b> $4.50 Bloody Mary'),
+    Bat17 = L.marker([42.0488, -87.6832], {icon: beerIcon}).bindPopup('<h4>Bat 17</h4><b>Every Night:</b> $3 12oz cans of Pabst Blue Ribbon and $4 16oz cans of Miller Lite<br><b>Monday (all hours):</b> $4.95 house wines<br><b>Monday (5-11pm):</b> $3 Select Pints and $20 Select Towers<br><b>Tuesday (5-11pm):</b> $5 Appetizer Special<br><b>Wednesday (5-11pm):</b> $4.50 Draft Night<br><b>Thursday (5-11pm):</b> $3 Vodka Special<br><b>Saturday (all hours):</b> $5 Shipwrecked Rum Special<br><b>Sunday (all hours):</b> $4.50 Bloody Mary'),
 
     Koi = L.marker([42.0465, -87.6810], {icon: beerIcon}).bindPopup('<h4>Koi</h4><b>Every Night (4:30 - 6:30pm):</b> half off cocktails'),
 
